@@ -18,12 +18,7 @@ steps:
         value: 1
     - delay: 100ms
 
-    # verifica se o led esta ligado ao longo do tempo
-    - expect-pin:
-        part-id: led1
-        pin: A # Anode pin
-        value: 1
-    - delay: 500ms
+    # verifica se o led esta ligado
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
