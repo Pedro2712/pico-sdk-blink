@@ -5,6 +5,7 @@ author: Uri Shaked
 steps:
     - wait-serial: 'Start'
 
+    ################################## Teste do botao 1 #######################################
     # Verifica se o led esta desligado
     - expect-pin:
         part-id: led1
@@ -23,6 +24,11 @@ steps:
         part-id: led1
         pin: A # Anode pin
         value: 1
+    
+    - set-control:
+        part-id: btn1
+        control: pressed
+        value: 0
 
     # Pressiona novamente o botao
     - set-control:
@@ -36,3 +42,118 @@ steps:
         part-id: led1
         pin: A # Anode pin
         value: 0
+    
+    - set-control:
+        part-id: btn1
+        control: pressed
+        value: 0
+
+    ################################## Teste do botao 2 #######################################
+
+    # Verifica se o led esta desligado
+    - expect-pin:
+        part-id: led2
+        pin: A # Anode pin
+        value: 0
+        
+    # Pressiona o botao
+    - set-control:
+        part-id: btn2
+        control: pressed
+        value: 1
+
+    - wait-serial: 'press 2'
+    # verifica se o led esta ligado
+    - expect-pin:
+        part-id: led2
+        pin: A # Anode pin
+        value: 1
+    
+    - set-control:
+        part-id: btn2
+        control: pressed
+        value: 0
+
+    # Pressiona novamente o botao
+    - set-control:
+        part-id: btn2
+        control: pressed
+        value: 1
+
+    - wait-serial: 'press 2'
+    # Verifica se o led foi apagado
+    - expect-pin:
+        part-id: led2
+        pin: A # Anode pin
+        value: 0
+    
+    - set-control:
+        part-id: btn2
+        control: pressed
+        value: 0
+    
+    # ################################## Teste do botao Junto #######################################
+
+    # Verifica se o led esta desligado
+    - expect-pin:
+        part-id: led1
+        pin: A # Anode pin
+        value: 0
+
+    - expect-pin:
+        part-id: led2
+        pin: A # Anode pin
+        value: 0
+
+    # Pressionas os botoes    
+    - set-control:
+        part-id: btn1
+        control: pressed
+        value: 1
+    
+    - set-control:
+        part-id: btn2
+        control: pressed
+        value: 1
+    
+    # Verifica o estado dos leds
+    - wait-serial: 'press'
+    - expect-pin:
+        part-id: led1
+        pin: A # Anode pin
+        value: 1
+
+    - wait-serial: 'press 2'
+    - expect-pin:
+        part-id: led2
+        pin: A # Anode pin
+        value: 1
+
+    # Despressiona os botoes    
+    - set-control:
+        part-id: btn1
+        control: pressed
+        value: 0
+    
+    - set-control:
+        part-id: btn2
+        control: pressed
+        value: 0
+
+    # Pressionas apenas o botao 1
+    - set-control:
+        part-id: btn1
+        control: pressed
+        value: 1
+    
+    # Verifica os leds
+    - wait-serial: 'press'
+    - expect-pin:
+        part-id: led1
+        pin: A # Anode pin
+        value: 0
+    
+    - expect-pin:
+        part-id: led2
+        pin: A # Anode pin
+        value: 1
