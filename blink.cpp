@@ -1,26 +1,26 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 #include <stdio.h>
 #include "pico/stdlib.h"
 
-const uint LED_PIN = 2;
+const uint LED_PIN = 28;
+const uint BUTTON_PIN = 14;
 
-int main() 
-{
+int main() {
     stdio_init_all();
+
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
+
+    gpio_init(BUTTON_PIN);
+    gpio_set_dir(BUTTON_PIN, GPIO_IN);
+    gpio_pull_down(BUTTON_PIN);
+
+    printf("Start\n");
     while (true) {
-        gpio_put(LED_PIN, 1);
-        printf("LED on\n");
-        sleep_ms(500);
-        gpio_put(LED_PIN, 0);
-        printf("LED off\n");
-        sleep_ms(500);
+        if (gpio_get(BUTTON_PIN) == 1) {
+            gpio_put(LED_PIN, !gpio_get(LED_PIN));
+            sleep_ms(500);
+        }
     }
+
     return 0;
 }
