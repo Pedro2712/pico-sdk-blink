@@ -18,7 +18,6 @@ int main() {
     while (true) {
         if (gpio_get(BUTTON_PIN) == 1) {
             gpio_put(LED_PIN, !gpio_get(LED_PIN));
-            sleep_ms(500);
         }
     }
 
