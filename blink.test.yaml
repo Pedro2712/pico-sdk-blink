@@ -19,12 +19,18 @@ steps:
         part-id: led1
         pin: A # Anode pin
         value: 1
-    
+
+
+    - set-control:
+        part-id: btn1
+        control: pressed
+        value: 0
+    - delay: 100ms    
     - set-control:
         part-id: btn1
         control: pressed
         value: 1
-    - delay: 200ms
+    - delay: 100ms
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
