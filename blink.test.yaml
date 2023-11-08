@@ -4,29 +4,40 @@ author: Uri Shaked
 
 steps:
     - wait-serial: 'Start'
+
+    # Verifica se o led esta desligado
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
         value: 0
         
-    # Press once
+    # Pressiona o botao
     - set-control:
         part-id: btn1
         control: pressed
         value: 1
     - delay: 100ms
+
+    # verifica se o led esta ligado ao longo do tempo
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
         value: 1
+    - delay: 500ms
+    - expect-pin:
+        part-id: led1
+        pin: A # Anode pin
+        value: 1
+    - delay: 100ms
 
-    
-    - delay: 100ms    
+    # Pressiona novamente o botao
     - set-control:
         part-id: btn1
         control: pressed
         value: 1
     - delay: 100ms
+
+    # Verifica se o led foi apagado
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
