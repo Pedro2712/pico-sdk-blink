@@ -57,5 +57,4 @@ jobs:
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: /
-          timeout: 1000 # ms
           scenario: 'blink.test.yaml'
