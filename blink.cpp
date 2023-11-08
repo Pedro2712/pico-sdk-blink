@@ -18,7 +18,7 @@ int main()
         gpio_put(LED_PIN, 1);
         printf("LED on\n");
         sleep_ms(250);
-        gpio_put(LED_PIN, 0);
+        gpio_put(LED_PIN, 1);
         printf("LED off\n");
         sleep_ms(250);
     }
