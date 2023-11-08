@@ -35,7 +35,7 @@ steps:
         part-id: btn1
         control: pressed
         value: 1
-    - delay: 100ms
+    - delay: 200ms
 
     # Verifica se o led foi apagado
     - expect-pin:
