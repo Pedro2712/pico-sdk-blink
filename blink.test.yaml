@@ -23,14 +23,13 @@ steps:
         part-id: led1
         pin: A # Anode pin
         value: 1
-    - delay: 100ms
 
     # Pressiona novamente o botao
     - set-control:
         part-id: btn1
         control: pressed
         value: 1
-    - delay: 200ms
+    - delay: 100ms
 
     # Verifica se o led foi apagado
     - expect-pin:
