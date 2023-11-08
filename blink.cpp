@@ -17,10 +17,10 @@ int main()
     while (true) {
         gpio_put(LED_PIN, 1);
         printf("LED on\n");
-        sleep_ms(250);
-        gpio_put(LED_PIN, 1);
+        sleep_ms(500);
+        gpio_put(LED_PIN, 0);
         printf("LED off\n");
-        sleep_ms(250);
+        sleep_ms(500);
     }
     return 0;
 }
