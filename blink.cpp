@@ -37,7 +37,7 @@ int main() {
 
         if (gpio_get(BUTTON_PIN2) == 1) {
             // Inverte o estado do LED
-            gpio_put(LED_PIN2, !gpio_get(LED_PIN2));
+            gpio_put(LED_PIN2, gpio_get(LED_PIN2));
             printf("Button press 2. LED state: %d\n", gpio_get(LED_PIN2));
             sleep_ms(DEBOUNCE_DELAY_MS);
         }
