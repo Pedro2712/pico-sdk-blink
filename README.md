@@ -1,5 +1,7 @@
 # Pico SDK Blink - Wokwi for VSCode
 
+[![Build and test](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/ci.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/ci.yml)
+
 Blink example using the Pico SDK with Wokwi configuration
 
 ## Building
