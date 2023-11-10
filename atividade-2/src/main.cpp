@@ -11,8 +11,9 @@ const uint DEBOUNCE_DELAY_MS = 250;
 int main() {
     stdio_init_all();
 
-    printf("passou");
     while (true) {
+        sleep_ms(500);
+        printf("passou\n");
     }
 
     return 0;
