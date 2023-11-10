@@ -3,6 +3,7 @@
 [![Atividade 1](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-1.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-1.yml)
 [![Atividade 2](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-2.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-2.yml)
 [![Atividade 3](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-3.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-3.yml)
+[![Atividade 4](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-4.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-4.yml)
 
 Blink example using the Pico SDK with Wokwi configuration
 
