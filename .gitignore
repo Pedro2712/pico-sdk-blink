@@ -31,5 +31,6 @@
 *.out
 *.app
 
+desktop.init
 atividade-*/build/**
 .vscode/.cortex-debug.*
