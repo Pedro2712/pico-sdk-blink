@@ -1,7 +1,7 @@
 # Pico SDK Blink - Wokwi for VSCode
 
-[![Atividade 1](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade1.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade1.yml)
-[![Atividade 2](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade2.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade2.yml)
+[![Atividade 1](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-1.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-1.yml)
+[![Atividade 2](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-2.yml/badge.svg)](https://github.com/Pedro2712/pico-sdk-blink/actions/workflows/atividade-2.yml)
 
 Blink example using the Pico SDK with Wokwi configuration
 
