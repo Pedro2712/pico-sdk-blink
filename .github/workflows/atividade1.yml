@@ -32,6 +32,7 @@ jobs:
       - name: Compile firmware
         run: |
           cd ${{ github.workspace }}
+          cd Aula1
           mkdir build
           cd build
           cmake ..
