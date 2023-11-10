@@ -61,4 +61,4 @@ jobs:
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
           path: atividade-1/test/
-          scenario: atividade-1/test/scenario.yml
+          scenario: scenario.yml
