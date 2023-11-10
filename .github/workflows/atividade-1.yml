@@ -60,5 +60,5 @@ jobs:
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          path: /atividade-1/test/
-          scenario: /atividade-1/test/scenario.yml
+          path: ${{ github.workspace }}/atividade-1/test/
+          scenario: ${{ github.workspace }}/atividade-1/test/scenario.yml
