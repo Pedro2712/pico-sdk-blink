@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: build/blink.*
+          path: build/main.*
 
   test-atividade-2:
     runs-on: ubuntu-latest
@@ -60,5 +60,5 @@ jobs:
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
-          path: /atividade-1/test
-          scenario: /atividade-1/test/scenario.yml
+          path: /atividade-2/test
+          scenario: /atividade-2/test/scenario.yml
