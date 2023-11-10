@@ -1,0 +1,3 @@
+/workspaces/pico-sdk-blink/bulid/pioasm/CMakeFiles/pioasm.dir
+/workspaces/pico-sdk-blink/bulid/pioasm/CMakeFiles/edit_cache.dir
+/workspaces/pico-sdk-blink/bulid/pioasm/CMakeFiles/rebuild_cache.dir
