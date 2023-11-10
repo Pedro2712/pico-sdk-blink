@@ -1,5 +1,5 @@
-name: Blinky test
 version: 1
+name: Blinky test
 author: Uri Shaked
 
 steps:
