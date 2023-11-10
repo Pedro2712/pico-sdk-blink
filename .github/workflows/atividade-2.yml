@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - aula2/**
+      - atividade-2/**
     branches:
       - main
 
@@ -35,7 +35,7 @@ jobs:
           cd pico-sdk && git submodule update --init && cd ..
       - name: Compile firmware
         run: |
-          cd ${{ github.workspace }}/atividade-1
+          cd ${{ github.workspace }}/atividade-2
           mkdir build
           cd build
           cmake ..
