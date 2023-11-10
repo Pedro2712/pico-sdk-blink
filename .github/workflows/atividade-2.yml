@@ -44,9 +44,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: build/main.*
+          path: atividade-2/build/main.*
 
-  test-atividade-2:
+  test:
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -55,8 +55,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: firmware
-          path: build
-      - name: Test Pi Pico SDK Blinky on Wokwi
+          path: atividade-2/build
+      - name: Test Pi Pico SDK on Wokwi
         uses: wokwi/wokwi-ci-action@v1
         with:
           token: ${{ secrets.WOKWI_CLI_TOKEN }}
