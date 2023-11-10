@@ -22,7 +22,7 @@ steps:
         control: pressed
         value: 0
 
-    - delay: 250ms
+    - delay: 500ms
     # verifica se o led esta ligado
     - expect-pin:
         part-id: led1
@@ -39,7 +39,7 @@ steps:
         control: pressed
         value: 0
 
-    - delay: 250ms
+    - delay: 500ms
     # Verifica se o led foi apagado
     - expect-pin:
         part-id: led1
@@ -64,7 +64,7 @@ steps:
         control: pressed
         value: 0
 
-    - delay: 250ms
+    - delay: 500ms
     # verifica se o led esta ligado
     - expect-pin:
         part-id: led2
@@ -81,7 +81,7 @@ steps:
         control: pressed
         value: 0
     
-    - delay: 250ms
+    - delay: 500ms
     # Verifica se o led foi apagado
     
     - expect-pin:
@@ -127,13 +127,13 @@ steps:
         value: 0
     
     # Verifica o estado dos leds
-    - delay: 250ms
+    - delay: 500ms
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
         value: 1
 
-    - delay: 250ms
+    - delay: 500ms
     - expect-pin:
         part-id: led2
         pin: A # Anode pin
@@ -151,7 +151,7 @@ steps:
         value: 0
     
     # Verifica os leds
-    - delay: 250ms
+    - delay: 500ms
     - expect-pin:
         part-id: led1
         pin: A # Anode pin
