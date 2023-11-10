@@ -1,4 +1,4 @@
-name: Build and test
+name: Atividade 1
 
 on:
   workflow_dispatch:
