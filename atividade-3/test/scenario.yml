@@ -1,0 +1,6 @@
+name: Blinky test
+version: 1
+author: Uri Shaked
+
+steps:
+    - wait-serial: 'teste'
