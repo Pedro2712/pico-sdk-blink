@@ -1,4 +1,4 @@
-# Pico SDK Blink - Wokwi for VSCode
+# Raspberry Pi Pico w - Embarcados
 
 ![](../../actions/workflows/atividade-1.yml/badge.svg)
 ![](../../actions/workflows/atividade-2.yml/badge.svg)
@@ -6,7 +6,20 @@
 ![](../../actions/workflows/atividade-4.yml/badge.svg)
 ![](../../actions/workflows/atividade-5.yml/badge.svg)
 
-Blink example using the Pico SDK with Wokwi configuration
+Configuração dos testes automáticos do Raspberry Pi Pico w.
+
+## Para Testar localmente
+
+### Instalar a biblioteca do Wokwi
+```
+curl -L https://wokwi.com/ci/install.sh | sh
+```
+
+### Exportar o token criado no servidor do Wokwi
+```
+export WOKWI_CLI_TOKEN=<Token>
+```
+Caso não tenha o token, acessar o seguinte site [Token Aqui](https://wokwi.com/dashboard/ci)
 
 ## Building
 
