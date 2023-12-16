@@ -5,6 +5,10 @@ Ambiende de desenvolvimento para Raspberry Pi Pico com testes de integração co
 
 ## Atividades
 
+O básico de entradas e saídas digitais:
+
+---
+
 ### Atividade #1 - GPIO debounce
 
 Botão debounce no GPIO com validação de um Custom Chip.
@@ -14,6 +18,8 @@ Botão debounce no GPIO com validação de um Custom Chip.
 ![](https://github.com/Pedro2712/raspberry-pi-pico-wokwi-ci/actions/workflows/atividade-1.yml/badge.svg)
 
 [Abrir atividade →](atividade-1)
+
+---
 
 ### Atividade #2 - Escrita serial
 
@@ -25,6 +31,8 @@ Escrita de mensagem via porta serial com validação.
 
 [Abrir atividade →](atividade-2)
 
+---
+
 ### Atividade #3 - Escrita serial
 
 Escrita de mensagem via porta serial com validação.
@@ -35,6 +43,8 @@ Escrita de mensagem via porta serial com validação.
 
 [Abrir atividade →](atividade-3)
 
+---
+
 ### Atividade #4 - Escrita serial
 
 Escrita de mensagem via porta serial com validação.
@@ -44,6 +54,8 @@ Escrita de mensagem via porta serial com validação.
 ![](https://github.com/Pedro2712/raspberry-pi-pico-wokwi-ci/actions/workflows/atividade-4.yml/badge.svg)
 
 [Abrir atividade →](atividade-4)
+
+---
 
 ## Compilando
 
