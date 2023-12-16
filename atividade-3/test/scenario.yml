@@ -1,6 +1,6 @@
-name: Blinky test
+name: Atividade 1
 version: 1
-author: Uri Shaked
+author: Luciano Felix e Pedro Andrade
 
 steps:
     - wait-serial: 'teste'
