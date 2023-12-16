@@ -1,37 +1,51 @@
-# Raspberry Pi Pico w - Embarcados
+# Raspberry Pi Pico Wokwi CI
 
 ![](../../actions/workflows/atividade-1.yml/badge.svg)
 ![](../../actions/workflows/atividade-2.yml/badge.svg)
 ![](../../actions/workflows/atividade-3.yml/badge.svg)
 ![](../../actions/workflows/atividade-4.yml/badge.svg)
 
-Configuração dos testes automáticos do Raspberry Pi Pico w.
+Ambiende de desenvolvimento para Raspberry Pi Pico com testes de integração com
+[Wokwi](https://wokwi.com/).
 
-## Para Testar localmente
+## Compilando
 
-### Exportar o token criado no servidor do Wokwi
-```
-export WOKWI_CLI_TOKEN=<Token>
-```
-Caso não tenha o token, acessar o seguinte site [Token Aqui](https://wokwi.com/dashboard/ci)
-
-## Building
-
-```
+```sh
 mkdir build
 cd build
 cmake ..
-make -j4
+make -j4 <atividade-*>
 ```
 
-## Simulation
+### Compilando chipes customizados
 
-To simulate this project, install [Wokwi for VS Code](https://marketplace.visualstudio.com/items?itemName=wokwi.wokwi-vscode). Open the project directory in Visual Studio Code, press **F1** and select "Wokwi: Start Simulator".
+Algumas atividades podem exigir a compilação de um chipe customizado para
+execução dos testes e simulações.
+[Saiba mais](https://docs.wokwi.com/pt-BR/chips-api/getting-started).
 
-## Automated Testing
-
-This project includes a Wokwi Automation Scenario in [blink.test.yaml](blink.test.yaml). The scenario runs the simulation for 1 second, and verifies that the LED is blinking. The scenario is run automatically on every commit, using [wokwi-ci-action](https://github.com/wokwi/wokwi-ci-action). You can also run the scenario locally, using the [wokwi-cli](https://github.com/wokwi/wokwi-cli) tool:
-
+```sh
+make -j4 <atividade-*>-chip-<chipe>
 ```
-wokwi-cli <atividade>/test --scenario scenario.yml --timeout 1000
+
+## Simulando
+
+Após compilar todas as dependências de uma atividade, para simular este projeto,
+instale o
+[Wokwi para o VS Code](https://marketplace.visualstudio.com/items?itemName=wokwi.wokwi-vscode).
+Abra o diretório do projeto no Visual Studio Code, pressione F1 e selecione
+"Wokwi: Start Simulator".
+
+### Executando teste de integração
+
+Com o Token do CLI obtido na
+[dashboard do Wokwi](https://wokwi.com/dashboard/ci), exporte com ovariável de
+ambiente e esecute o programa.
+
+```sh
+export WOKWI_CLI_TOKEN=<Token>
+wokwi-cli <atividade-*>/test --scenario scenario.yml
 ```
+
+## License
+
+Este projeto utiliza uma licença do MIT. [Saiba mais](LICENSE).
