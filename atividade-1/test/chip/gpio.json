@@ -1,0 +1,14 @@
+{
+    "name": "AAAAAAAAAAAAAAAAAA",
+    "author": "Luciano",
+    "pins": [
+        "A",
+        "B",
+        "C",
+        "",
+        "GND",
+        "VCC",
+        "",
+        ""
+    ]
+}

@@ -1,4 +1,12 @@
 [wokwi]
 version = 1
-firmware = "../build/main.uf2"
-elf = "../build/main.elf"
+firmware = "../../build/atividade-1/atividade-1.uf2"
+elf = "../../build/atividade-1/atividade-1.elf"
+
+[[chip]]
+name = 'test'
+binary = 'atividade-1/test/chip/test.wasm'
+
+[[chip]]
+name = 'test2'
+binary = 'atividade-1/test/chip/gpio.wasm'

@@ -38,3 +38,16 @@ RUN cd /apps && git clone https://github.com/wtarreau/bootterm.git --depth=1 \
     && cd bootterm && make -j 8 install 
 
 RUN usermod -aG plugdev vscode
+
+
+# Compile Custom Chips
+RUN apt-get -y install clang lld git make llvm
+
+RUN git clone https://github.com/CraneStation/wasi-libc.git && \
+    cd wasi-libc && \
+    make install INSTALL_DIR=/opt/wasi-libc && \
+    cd ../ && \
+    rm -rf wasi-libc
+
+RUN mkdir -p /usr/lib/llvm16/lib/clang/16/lib/wasi && \
+    wget -O /usr/lib/llvm16/lib/clang/16/lib/wasi/libclang_rt.builtins-wasm32.a https://github.com/jedisct1/libclang_rt.builtins-wasm32.a/blob/master/precompiled/llvm-15-to-16/libclang_rt.builtins-wasm32.a?raw=true

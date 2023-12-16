@@ -1,0 +1,11 @@
+{
+    "name": "Insper Chip",
+    "author": "Luciano",
+    "pins": [
+        "A",
+        "B",
+        "C",
+        "GND",
+        "VCC"
+    ]
+}
