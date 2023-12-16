@@ -1,4 +1,4 @@
 [wokwi]
 version = 1
-firmware = "../build/main.uf2"
-elf = "../build/main.elf"
+firmware = "../../build/atividade-4/atividade-4.uf2"
+elf = "../../build/atividade-4/atividade-4.elf"
