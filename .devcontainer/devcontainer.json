@@ -1,17 +1,17 @@
 {
-	"image": "rafaelcorsi/wokwi",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-			"ms-vscode.cpptools",
-			"marus25.cortex-debug",
-			"ms-vscode.cmake-tools",
-			"twxs.cmake",
-			"eamodio.gitlens",
-			"xaver.clang-format",
-			"chris-hock.pioasm",
-			"Wokwi.wokwi-vscode"
-			]
-		}
-	}
+    "image": "rafaelcorsi/wokwi",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "chris-hock.pioasm",
+                "eamodio.gitlens",
+                "marus25.cortex-debug",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools",
+                "twxs.cmake",
+                "Wokwi.wokwi-vscode",
+                "xaver.clang-format"
+            ]
+        }
+    }
 }

@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "wokwi-api.h": "c"
-    },
-    "cmake.configureOnOpen": true
-}
