@@ -1,4 +1,4 @@
-# Atividade 4
+# Atividade #4 - Escrita serial
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel nunc pretium,
 volutpat dolor eu, dignissim sem. Vivamus nunc leo, viverra nec mollis vel,

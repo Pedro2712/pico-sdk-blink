@@ -1,4 +1,4 @@
-# Atividade 1
+# Atividade #1 - GPIO debounce
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel nunc pretium,
 volutpat dolor eu, dignissim sem. Vivamus nunc leo, viverra nec mollis vel,
