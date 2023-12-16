@@ -35,16 +35,27 @@ jobs:
           cd pico-sdk && git submodule update --init && cd ..
       - name: Compile firmware
         run: |
-          cd ${{ github.workspace }}/atividade-1
           mkdir build
           cd build
           cmake ..
-          make
+          make atividade-1
       - name: Upload firmware
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: atividade-1/build/main.*
+          path: build/atividade-1/atividade-1.*
+      # Build chip
+      - name: Build chip
+        uses: wokwi/wokwi-chip-clang-action@main
+        with:
+          sources: "atividade-1/test/chip/gpio.c"
+      - name: 'Upload Artifacts'
+        uses: actions/upload-artifact@v3
+        with:
+          name: chips
+          path: |
+            atividade-1/test/chip/gpio.json
+            atividade-1/test/chip/gpio.wasm
 
   test:
     runs-on: ubuntu-latest
@@ -55,7 +66,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: firmware
-          path: atividade-1/build
+          path: build/atividade-1/
+      - name: Download chips
+        uses: actions/download-artifact@v2
+        with:
+          name: chips
+          path: atividade-1/test/chip/
       - name: Test Pi Pico SDK on Wokwi
         uses: wokwi/wokwi-ci-action@v1
         with:

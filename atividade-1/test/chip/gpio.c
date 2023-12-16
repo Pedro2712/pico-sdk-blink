@@ -10,6 +10,7 @@
 
 int status = 0;
 int vezes = 0;
+int count = 0;
 
 typedef struct {
     pin_t pin_a;
@@ -25,6 +26,7 @@ static void update_output(chip_state_t *chip) {
     uint32_t a = pin_read(chip->pin_a);
     if (a) {
         printf("ON\n");
+        count += 1;
     } else {
         printf("OFF\n");
     }
@@ -53,13 +55,19 @@ static void chip_pin_change(void *user_data, pin_t pin, uint32_t value) {
 
 void chip_timer_callback(void *user_data) {
   chip_state_t *chip = (chip_state_t *)user_data;
-
+  
   if (vezes < 5) {
     status = !status;
     vezes += 1;
     pin_write(chip->pin_b, status);
   } else {
     pin_write(chip->pin_b, 1);
+  }
+  
+  if (count == 1) {
+    pin_write(chip->pin_c, 1);
+  } else {
+    pin_write(chip->pin_c, 0);
   }
 }
 
@@ -71,6 +79,7 @@ void chip_init() {
     // Inicializa os pinos A e B
     chip->pin_a = pin_init("A", INPUT);
     chip->pin_b = pin_init("B", OUTPUT);
+    chip->pin_c = pin_init("C", OUTPUT);
 
     chip->t_start = get_sim_nanos() / 1000000;
 
@@ -88,6 +97,7 @@ void chip_init() {
 
     pin_watch(chip->pin_a, &watch_config);
     pin_watch(chip->pin_b, &watch_config);
+    pin_watch(chip->pin_c, &watch_config);
 
     timer_t timer_id = timer_init(&config);
     timer_start(timer_id, 1000, true);

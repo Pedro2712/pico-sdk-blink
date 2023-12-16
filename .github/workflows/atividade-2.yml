@@ -35,16 +35,15 @@ jobs:
           cd pico-sdk && git submodule update --init && cd ..
       - name: Compile firmware
         run: |
-          cd ${{ github.workspace }}/atividade-2
           mkdir build
           cd build
           cmake ..
-          make
+          make atividade-2
       - name: Upload firmware
         uses: actions/upload-artifact@v3
         with:
           name: firmware
-          path: atividade-2/build/main.*
+          path: build/atividade-2/atividade-2.*
 
   test:
     runs-on: ubuntu-latest
@@ -55,7 +54,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: firmware
-          path: atividade-2/build
+          path: build/atividade-2
       - name: Test Pi Pico SDK on Wokwi
         uses: wokwi/wokwi-ci-action@v1
         with:

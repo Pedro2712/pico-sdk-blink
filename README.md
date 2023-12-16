@@ -9,11 +9,6 @@ Configuração dos testes automáticos do Raspberry Pi Pico w.
 
 ## Para Testar localmente
 
-### Instalar a biblioteca do Wokwi
-```
-curl -L https://wokwi.com/ci/install.sh | sh
-```
-
 ### Exportar o token criado no servidor do Wokwi
 ```
 export WOKWI_CLI_TOKEN=<Token>

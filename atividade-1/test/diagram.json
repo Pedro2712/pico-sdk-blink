@@ -11,8 +11,7 @@
       "rotate": 90,
       "attrs": { "builder": "pico-sdk" }
     },
-    { "type": "chip-test", "id": "chip1", "top": -94.98, "left": -43.2, "attrs": {} },
-    { "type": "chip-test2", "id": "chip2", "top": 0.0, "left": -43.2, "attrs": {} },
+    { "type": "chip-gpio", "id": "chip1", "top": -94.98, "left": -43.2, "attrs": {} },
     { "type": "wokwi-gnd", "id": "gnd1", "top": 0, "left": -365.4, "attrs": {} },
     {
       "type": "wokwi-led",
